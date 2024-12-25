@@ -13,7 +13,7 @@ import {
 export function SelectManager() {
   return (
     <Select>
-      <SelectTrigger className="w-full h-fulle">
+      <SelectTrigger className="w-full h-full">
         <SelectValue placeholder="Manager"/>
       </SelectTrigger>
       <SelectContent>

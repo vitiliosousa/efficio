@@ -7,6 +7,7 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
+    DialogClose
 } from "@/components/ui/dialog"
 import Notification from "@/components/Notification"
 
@@ -32,7 +33,7 @@ export function ShowNotifications() {
                     <Notification />
                 </div>
                 <DialogFooter>
-                    <Button className="bg-transparent border border-zinc-700 w-52">Close</Button>
+                <DialogClose className="bg-transparent border border-zinc-700 w-52 rounded text-zinc-300 text-sm h-10">Close</DialogClose>
                 </DialogFooter>
             </DialogContent>
         </Dialog>

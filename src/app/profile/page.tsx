@@ -1,5 +1,13 @@
+
 import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+import { ChangePassword } from "@/components/ChangePassword"
+import { ChangeName } from "@/components/ChangeName"
+import { ChangeUsername } from "@/components/ChangeUsername"
+import { ChangeEmail } from "@/components/ChangeEmail"
+
+export const metadata = {
+    title: "Profile - Efficio"
+}
 
 export default function Profile() {
     return (
@@ -12,20 +20,24 @@ export default function Profile() {
                     <div className="bg-green-300 p-4 text-4xl text-emerald-950 rounded-full">
                         IM
                     </div>
-                    <p className="text-white">Ivan Manhique</p>
+                    <div className="flex gap-2">
+                        <p className="text-white">Ivan Manhique</p>
+                        <ChangeName/>
+                    </div>
+
                 </div>
                 <div className="w-full space-y-4">
                     <div className="w-full flex gap-4">
-                        <Input placeholder="Username" className="border-zinc-800 bg-zinc-900 text-zinc-300" />
-                        <Button className="bg-green-300 hover:bg-green-400 text-black w-52">Change</Button>
+                        <Input placeholder="Username" className="border-zinc-800 bg-transparent text-zinc-300" />
+                        <ChangeUsername/>
                     </div>
                     <div className="w-full flex gap-4">
-                        <Input placeholder="Email" className="border-zinc-800 bg-zinc-900 text-zinc-300"/>
-                        <Button className="bg-green-300 hover:bg-green-400 text-black w-52">Change</Button>
+                        <Input placeholder="Email" className="border-zinc-800 bg-transparent text-zinc-300" />
+                        <ChangeEmail/>
                     </div>
                     <div className="w-full flex gap-4">
-                        <Input placeholder="Password" className="border-zinc-800 bg-zinc-900 text-zinc-300"/>
-                        <Button className="bg-green-300 hover:bg-green-400 text-black w-52">Change</Button>
+                        <Input placeholder="Password" className="border-zinc-800 bg-transparent text-zinc-300" />
+                       <ChangePassword/>
                     </div>
                 </div>
             </div>

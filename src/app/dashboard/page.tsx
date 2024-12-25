@@ -4,6 +4,11 @@ import CardUpcoming from "@/components/CardUpcoming"
 import { NewTask } from "@/components/NewTask"
 import { NewProject } from "@/components/NewProject"
 import { Card } from "@/components/ui/card"
+
+export const metadata = {
+    title: "Dashboard - Efficio"
+}
+
 export default function Dashboard() {
     return (
         <div className="h-full w-full bg-zinc-950 md:px-10 space-y-4">

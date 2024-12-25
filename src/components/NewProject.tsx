@@ -7,6 +7,7 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
+    DialogClose
 } from "@/components/ui/dialog"
 import iconNewProject from "../../public/iconNewProject.svg"
 import Image from "next/image"
@@ -14,7 +15,8 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { SelectManager } from "@/components/SelectManager"
 import { SelectColaborator } from "@/components/SelectColaborator"
-import { SelectDate } from "@/components/SelectDate"
+import { StartDate } from "@/components/StartDate"
+import { EndDate } from "@/components/EndDate"
 export function NewProject() {
     return (
         <Dialog>
@@ -38,13 +40,13 @@ export function NewProject() {
                         <SelectColaborator/>
                     </div>
                     <div className="flex space-x-2 h-10">
-                        <SelectDate/>
-                        <SelectDate/>
+                        <StartDate/>
+                        <EndDate/>
                     </div>
                     <Textarea className="border-zinc-600 h-28 rounded-xl text-zinc-300" placeholder="Description"/>
                 </div>
                 <DialogFooter>
-                    <Button className="bg-transparent border border-zinc-700 w-52">Close</Button>
+                <DialogClose className="bg-transparent border border-zinc-700 w-52 rounded text-zinc-300 text-sm">Close</DialogClose>
                     <Button className="bg-green-300 border text-black hover:bg-green-400 w-52">Create</Button>
                 </DialogFooter>
             </DialogContent>
