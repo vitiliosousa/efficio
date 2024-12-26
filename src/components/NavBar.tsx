@@ -17,7 +17,7 @@ export default function Navbar() {
 
 
   const menuItems = [
-    { name: "Dashboards", route: "/dashboard", icon: ListVideo },
+    { name: "Dashboard", route: "/dashboard", icon: ListVideo },
     { name: "Tasks", route: "/tasks", icon: Tags },
     { name: "Projects", route: "/projects", icon: ClipboardList },
     { name: "Search", route: "/search", icon: Search },

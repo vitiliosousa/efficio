@@ -1,7 +1,11 @@
-export default function Projects () {
+import Projects from "./Projects";
+export const metadata = {
+    title: "Projects - Efficio"
+  }
+
+
+export default function page () {
     return(
-        <div>
-            
-        </div>
+        <Projects/>
     )
 }

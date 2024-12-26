@@ -81,7 +81,7 @@ export default function TaskDetails({ task }: TaskDetailsProps) {
         <h1>Comment</h1>
         <div className="w-full flex gap-4">
         <Input placeholder="Text" className="border-zinc-600"/>
-        <Button className="text-black bg-green-300 w-40">Add</Button>
+        <Button className="text-black bg-green-300 w-1/3">Add</Button>
         </div>
       </div>
     </Card>

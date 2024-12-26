@@ -1,7 +1,11 @@
-export default function Search() {
+import Search from "./Search"
+export const metadata = {
+    title: "Search - Efficio"
+  }
+  
+
+export default function Page() {
     return(
-        <div>
-            
-        </div>
+        <Search/>
     )
 }
