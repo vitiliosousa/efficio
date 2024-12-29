@@ -17,7 +17,7 @@ export function ShowUpcomingTasks() {
             <DialogTrigger asChild>
                 <Button variant="link" className="text-zinc-500 underline text-xs">Show All</Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[900px] bg-zinc-800 border-zinc-800">
+            <DialogContent className="sm:max-w-[900px] bg-zinc-900 border-zinc-800">
                 <DialogHeader>
                     <DialogTitle className="text-white text-2xl font-semibold">Upcoming Tasks</DialogTitle>
                     <DialogDescription className="text-zinc-500">
