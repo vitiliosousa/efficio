@@ -1,3 +1,5 @@
+'use client'
+
 import CardNotification from "@/components/CardNotification"
 import CardActiveTasks from "@/components/CardActiveTasks"
 import CardUpcoming from "@/components/CardUpcoming"
