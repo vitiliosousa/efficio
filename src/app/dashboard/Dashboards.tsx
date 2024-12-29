@@ -4,8 +4,36 @@ import CardUpcoming from "@/components/CardUpcoming"
 import { NewTask } from "@/components/NewTask"
 import { NewProject } from "@/components/NewProject"
 import { Card } from "@/components/ui/card"
+import { useEffect } from "react"
+import { useRouter } from "next/navigation"
+import { jwtDecode } from "jwt-decode";
 
 export default function Dashboard() {
+    const router = useRouter()
+
+    useEffect(() => {
+        const token = localStorage.getItem("token")
+
+        if(!token) {
+            router.push("/")
+            return
+        }
+
+        try {
+            const decodedToken:any = jwtDecode(token)
+            const currentTime = Math.floor(Date.now() / 1000)
+
+            if (decodedToken.exp < currentTime) {
+                
+                localStorage.removeItem("token") 
+                router.push("/")
+            }
+        }catch(error) {
+            localStorage.removeItem("token");
+            router.push("/")
+        }
+    },[router])
+    
     return (
         <div className="h-full w-full bg-zinc-950 md:px-10 space-y-4">
             <div className="w-full">

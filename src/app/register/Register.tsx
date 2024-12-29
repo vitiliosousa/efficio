@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
-import axios from "axios"
+import axiosInstance from "@/app/api/register/axiosIntance"
 import { useState } from "react";
 
 export default function Register() {
@@ -42,14 +42,15 @@ export default function Register() {
         }
 
         try {
-            const response = await axios.post("/api/v1/auth/register", formData);
+            const response = await axiosInstance.post("/api/v1/auth/register", formData);
 
-            const {token} = response.data
-
-            localStorage.setItem("token", token);
-
-            setSuccess("Account created successfully!");
-            setTimeout(() => router.push("/dashboard"), 1500);
+            if (response.data && response.data.token) {
+                localStorage.setItem("token", response.data.token);
+                setSuccess("Account created successfully!");
+                setTimeout(() => router.push("/dashboard"), 1500);
+            } else {
+                setError("Token not found in response.");
+            }
         } catch (err: any) {
             setError(err.response?.data?.message || "An error occurred during registration.");
         }
