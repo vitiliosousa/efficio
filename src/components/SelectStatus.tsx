@@ -14,14 +14,14 @@ export function SelectStatus() {
   return (
     <Select>
       <SelectTrigger className="w-full h-full">
-        <SelectValue placeholder="Project" />
+        <SelectValue placeholder="Status" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Projects</SelectLabel>
-          <SelectItem value="f">Start</SelectItem>
-          <SelectItem value="g">Doing</SelectItem>
-          <SelectItem value="h">Done</SelectItem>
+          <SelectLabel>Status</SelectLabel>
+          <SelectItem value="start">Start</SelectItem>
+          <SelectItem value="doing">Doing</SelectItem>
+          <SelectItem value="done">Done</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>

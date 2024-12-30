@@ -29,8 +29,9 @@ export default function Tasks() {
 
     return (
         <div className="h-full w-full bg-zinc-950 md:px-10 space-y-4">
-            <div className="w-full">
+             <div className="w-full space-y-2">
                 <h1 className="text-white text-2xl font-semibold">Tasks</h1>
+                <p className="text-zinc-300 text-sm">List of all Tasks of the system</p>
             </div>
             <div className="w-full flex gap-2 h-12">
                 <Input placeholder="Search" className="h-full border-zinc-600 text-white" />
